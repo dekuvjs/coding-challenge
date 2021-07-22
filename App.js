@@ -8,15 +8,16 @@
 
 import React from 'react';
 import {Provider} from 'react-redux';
-import MyReduxList from './src/components/MyReduxList';
 import {configureStore} from './src/global_state/store';
+import 'react-native-gesture-handler';
+import MainNavigator from './src/navigators/MainNavigator';
 
 const store = configureStore();
 
 const App = () => {
   return (
     <Provider store={store}>
-      <MyReduxList />
+      <MainNavigator />
     </Provider>
   );
 };

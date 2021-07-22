@@ -20,7 +20,6 @@ const dictionary = lorem.split(' ');
 class MyReduxList extends Component {
   render() {
     console.log('Render MyReduxList');
-    const nextIndex = this.props.listData.length;
     return (
       <SafeAreaView style={{flex: 1, backgroundColor: 'white'}}>
         <FlatList
@@ -34,13 +33,7 @@ class MyReduxList extends Component {
         />
         <Button
           title="Add row"
-          onPress={() => {
-            this.props.addItem({
-              index: nextIndex,
-              value: dictionary[nextIndex],
-              key: nextIndex,
-            });
-          }}
+          onPress={() => this.props.navigation.navigate('AddNewRow')}
         />
       </SafeAreaView>
     );
