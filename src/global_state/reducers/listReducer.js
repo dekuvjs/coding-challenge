@@ -10,7 +10,7 @@ export default (state = initialState, action) => {
       const index = action.payload.index;
       if (state[index]) {
         state[index] = action.payload;
-        return state;
+        return [...state];
       }
       return state;
     }
