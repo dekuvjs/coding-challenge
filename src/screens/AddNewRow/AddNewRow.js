@@ -26,7 +26,7 @@ const AddNewRow = ({navigation}) => {
         placeholder="Add text here"
       />
       <Button
-        title="Add row"
+        title="Submit"
         onPress={() => {
           dispatch(
             addItem({
